@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <img src="../assets/logo.png">
     <Counter :count="count" @increaseCount="increaseCount" @decreaseCount="decreaseCount" />
   </div>
 </template>
@@ -16,20 +15,21 @@ export default {
     HelloWorld,
     Counter
   },
-  data() {
+  data () {
     return {
       count: 1
     }
   },
   methods: {
     increaseCount (event) {
+      // this.$loading.show()
       console.log('increaseCount')
       this.count++
     },
     decreaseCount (event) {
       console.log('decreaseCount')
       this.count--
-    },
+    }
   }
 }
 </script>
